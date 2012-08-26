@@ -1,0 +1,138 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    margin: 50px 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#outer {
+    width: 1000px;
+    margin: 0 auto;    
+}
+
+.title {
+	font: Helvetica;
+    font-size: 2.95em;
+	font-weight: bold;
+	white-space:pre-line ;
+}
+
+.titleContainer {
+	border-style: none none dashed none;
+	border-color: #ccc;
+	border-width: 4px;
+	margin: 10px 50px;
+	padding: 20px 0px;
+}
+
+.header {
+    padding: 5px;
+	border-style: dashed none none none;
+	border-color: #ccc;
+	border-width: 4px;
+	margin: 30px 0px 10px 0px;
+}
+
+.header .name {
+    display: inline-block;
+    width: 270px;
+    font-size: 1.75em;
+    color: #777;
+	font-weight: bold;
+}
+
+.header .target {
+    display: inline-block;
+    width: 235px;
+    text-align: right;
+    font-size: 1.7em;
+    color: #777;
+	font-weight: bold;
+}
+
+.header .release {
+    display: inline-block;
+    width: 235px;
+    text-align: right;
+    font-size: 1.7em;
+    color: #777;
+	font-weight: bold;
+}
+
+.header .status {
+    display: inline-block;
+    width: 235px;
+    text-align: right;
+    font-size: 1.7em;
+    color: #777;
+	font-weight: bold;
+}
+
+.project {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.project .name {
+    display: inline-block;
+    width: 270px;
+    font-size: 1.5em;
+    color: #777;
+}
+
+.project .target {
+    display: inline-block;
+    width: 235px;
+    text-align: right;
+    font-size: 1.5em;
+    color: #777;
+}
+
+.project .release {
+    display: inline-block;
+    width: 235px;
+    text-align: right;
+    font-size: 1.5em;
+    color: #777;
+}
+
+.project .status {
+    display: inline-block;
+    width: 235px;
+    text-align: right;
+    font-size: 1.5em;
+	font-weight: bold;
+}
+
+.project.selected {
+    background-color: yellow;
+}
+
+.project.selected .score {
+    color: black;
+}
+
+.details, .none {
+    font-weight: bold;
+    font-size: 1.5em;
+    border-style: dashed none none none;
+    border-color: #ccc;
+    border-width: 4px;
+    margin: 50px 10px;
+    padding: 10px 0px;
+}
+
+.none {
+    color: #777;
+}
+
+.inc {
+  cursor: pointer;
+}
+
+
