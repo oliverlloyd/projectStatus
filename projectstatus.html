@@ -31,7 +31,14 @@
 			<span class="status">Status</span>
 		</div>
 		{{#each projects}}
-		{{> project}}
+		<div class="project">
+			<span class="name">{{name}}</span>
+			<span class="target">{{target}}</span>
+			<span class="release">{{release}}</span>
+			{{#if status_is "GOOD"}}
+			<span class="status" style="color:green">{{status}}</span>
+			{{/if}}
+		</div>
 		{{/each}}
 	</div>
 
