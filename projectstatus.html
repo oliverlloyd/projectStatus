@@ -23,7 +23,6 @@
 
 	
 	<div class="statusboard">
-
 		<div class="header">
 			<span class="name">Project</span>
 			<span class="target">Target Reached</span>
@@ -31,16 +30,17 @@
 			<span class="status">Status</span>
 		</div>
 		{{#each projects}}
-		<div class="project">
-			<span class="name">{{name}}</span>
-			<span class="target">{{target}}</span>
-			<span class="release">{{release}}</span>
-			{{#if status_is "GOOD"}}
-			<span class="status" style="color:green">{{status}}</span>
-			{{/if}}
-		</div>
+		{{> project}}
 		{{/each}}
 	</div>
+
+	
+	<!--<div class="project">
+		<span class="name">{{name}}</span>
+		<span class="target">{{target}}</span>
+		<span class="release">{{release}}</span>
+		<span class="status" style="color:{{getStatusColor status}}">{{status}}</span>
+	</div> -->
 
 	{{#if selected_name}}
 		<div class="details">

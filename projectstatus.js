@@ -39,8 +39,14 @@ if (Meteor.is_client) {
 	};
 	
 	Template.project.selected = function () {
+		//console.log(this)
+		//if (this.status == "GOOD") {
+		//	console.log ('GOOD');
+		//}
+		
 		return Session.equals("selected_project", this._id) ? "selected" : '';
 	};
+	
 
 	Template.statusboard.events = {
 		'click input.update': function () {
@@ -87,10 +93,23 @@ if (Meteor.is_client) {
 	  return selectedStatus == optionValue ? ' selected' : '';
 	});
 	
-	Handlebars.registerHelper('setStatusColor', function(selectedStatus) {
+	// not currently used
+	Handlebars.registerHelper('getStatusColor', function(selectedStatus) {
 		switch (selectedStatus) {
 			case "GOOD" : {
 				return 'green';
+			}
+			break;
+			case "BAD" : {
+				return 'orange';
+			}
+			break;
+			case "UGLY" : {
+				return 'red';
+			}
+			break;
+			case "IN PROGRESS" : {
+				return 'blue';
 			}
 			break;
 		}
