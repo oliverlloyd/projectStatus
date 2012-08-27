@@ -6,7 +6,7 @@ if (Meteor.is_client) {
 	// link each template value to a db query - meteor propagates any changes to the underlying data in real time, automatically
 	// (note. this could perhaps be improved by reducing the number of queries and not having so many separate statements?)
 	Template.statusboard.projects = function () {
-		return Projects.find({}, {sort: {score: -1, name: 1}});
+		return Projects.find({}, {sort: {target: -1, status: 1}});
 	};
 
 	Template.statusboard.selected_name = function () {
