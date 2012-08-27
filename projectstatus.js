@@ -67,7 +67,9 @@ if (Meteor.is_client) {
 			var newName = $('#project_name').val();
 			if (Validation.valid_name(newName)) {
 				Projects.insert({
-					name: newName
+					name: newName,
+					target: 0,
+					status: "IN PROGRESS"
 				})
 				
 				var project = Projects.findOne({name: newName});
