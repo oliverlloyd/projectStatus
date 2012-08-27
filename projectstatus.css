@@ -1,23 +1,23 @@
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    margin: 50px 0;
-    padding: 0;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	margin: 50px 0;
+	padding: 0;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 #outer {
-    width: 1000px;
-    margin: 0 auto;    
+	width: 1000px;
+	margin: 0 auto;    
 }
 
 .title {
 	font: Helvetica;
-    font-size: 2.95em;
+	font-size: 2.95em;
 	font-weight: bold;
 	white-space:pre-line ;
 }
@@ -31,7 +31,7 @@ body {
 }
 
 .header {
-    padding: 5px;
+	padding: 5px;
 	border-style: dashed none none none;
 	border-color: #ccc;
 	border-width: 4px;
@@ -39,84 +39,137 @@ body {
 }
 
 .header .name {
-    display: inline-block;
-    width: 270px;
-    font-size: 1.75em;
-    color: #777;
+	display: inline-block;
+	width: 270px;
+	font-size: 1.75em;
+	color: #777;
 	font-weight: bold;
 }
 
 .header .target {
-    display: inline-block;
-    width: 355px;
-    text-align: center;
-    font-size: 1.7em;
-    color: #777;
+	display: inline-block;
+	width: 355px;
+	text-align: center;
+	font-size: 1.7em;
+	color: #777;
 	font-weight: bold;
 }
 
 
 .header .status {
-    display: inline-block;
-    width: 355px;
-    text-align: right;
-    font-size: 1.7em;
-    color: #777;
+	display: inline-block;
+	width: 355px;
+	text-align: right;
+	font-size: 1.7em;
+	color: #777;
 	font-weight: bold;
 }
 
 .project {
-    cursor: pointer;
-    padding: 5px;
+	cursor: pointer;
+	padding: 5px;
 }
 
 .project .name {
-    display: inline-block;
-    width: 270px;
-    font-size: 1.5em;
-    color: #777;
+	display: inline-block;
+	width: 270px;
+	font-size: 1.5em;
+	color: #777;
 }
 
 .project .target {
-    display: inline-block;
-    width: 355px;
-    text-align: center;
-    font-size: 1.5em;
-    color: #777;
+	display: inline-block;
+	width: 355px;
+	text-align: center;
+	font-size: 1.5em;
+	color: #777;
 }
 
 .project .status {
-    display: inline-block;
-    width: 355px;
-    text-align: right;
-    font-size: 1.5em;
+	display: inline-block;
+	width: 355px;
+	text-align: right;
+	font-size: 1.5em;
 	font-weight: bold;
 }
 
 .project.selected {
-    background-color: yellow;
+	background-color: yellow;
 }
 
 .project.selected .score {
-    color: black;
+	color: black;
 }
 
 .details, .none {
-    font-weight: bold;
-    font-size: 1.5em;
-    border-style: dashed none none none;
-    border-color: #ccc;
-    border-width: 4px;
-    margin: 20px 10px;
-    padding: 10px 0px;
+	font-weight: bold;
+	font-size: 1.5em;
+	border-style: dashed none none none;
+	border-color: #ccc;
+	border-width: 4px;
+	margin: 20px 10px;
+	padding: 10px 0px;
 }
 
 .none {
-    color: #777;
+	color: #777;
 }
 
 .inc {
-  cursor: pointer;
+	cursor: pointer;
 }
 
+/* Button style */
+.button {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 3px;
+	margin-bottom: 20px;
+	color: #000;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 12px;
+	padding: 0 14px;
+	line-height: 26px;
+	font-weight: bold;
+	-webkit-transition: background-color .3s ease-in-out;
+	-moz-transition: background-color .3s ease-in-out;
+	-o-transition: background-color .3s ease-in-out;
+	transition: background-color .3s ease-in-out;
 
+}
+
+.button:hover {
+	text-decoration: inherit;
+	color: inherit;
+	background-color: #DCDCDC;
+}
+
+.button-primary:hover {
+	text-decoration: inherit;
+	color: inherit;
+	background-color: #f5e810;
+}
+
+.button-danger:hover {
+	text-decoration: inherit;
+	color: white;
+	background-color: #FF6A6A;
+}
+
+.button-danger {
+	background: #EE6363;
+	color: white;
+}
+
+.button-primary {
+	background: #dfd52e;
+}
+
+#footer {
+	position:fixed;
+	right:1%;
+	bottom:10px;
+	height:30px;
+	width:98%;
+}

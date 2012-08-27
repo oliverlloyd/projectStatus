@@ -45,7 +45,7 @@ if (Meteor.is_client) {
 	
 	Template.statusboard.events = {
 		// update project
-		'click input.update': function () {
+		'click a.update': function () {
 			Projects.update(Session.get("selected_project"), {
 				name: $('#project_name_edit').val(),
 				release: $('#project_release_edit').val(),
@@ -58,12 +58,12 @@ if (Meteor.is_client) {
 			Session.set("selected_project", null);
 		},
 		// remove project
-		'click input.remove': function() {
+		'click a.remove': function() {
 			var project = Projects.findOne(Session.get("selected_project"));
 			Projects.remove({_id: project._id})
 		},
 		// insert a new project
-		'click input.add': function () {
+		'click a.add': function () {
 			var newName = $('#project_name').val();
 			if (Validation.valid_name(newName)) {
 				Projects.insert({
@@ -75,7 +75,7 @@ if (Meteor.is_client) {
 			}
 		},
 		// nothing is selected
-		'click input.cancel': function () {
+		'click a.cancel': function () {
 			Session.set("selected_project", null);
 		}
 	};
@@ -97,7 +97,7 @@ if (Meteor.is_client) {
 	Handlebars.registerHelper('getStatusColor', function(selectedStatus) {
 		switch (selectedStatus) {
 			case "GOOD" : {
-				return 'green';
+				return '#9ACD32';
 			}
 			break;
 			case "BAD" : {
@@ -105,11 +105,11 @@ if (Meteor.is_client) {
 			}
 			break;
 			case "UGLY" : {
-				return 'red';
+				return '#EE6363';
 			}
 			break;
 			case "IN PROGRESS" : {
-				return 'blue';
+				return '#7D9EC0';
 			}
 			break;
 		}
