@@ -5,5 +5,5 @@ A simple meteor app largely based on the leaderboard example that will display t
 
 The meteor framework means that CRUD actions are automatically propagated to all connected browsers in real time.
 
-
-http://www.meteor.com/main
+Demo: http://projectstatus.meteor.com
+Meteor: http://www.meteor.com/main
