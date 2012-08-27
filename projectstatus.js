@@ -1,9 +1,10 @@
-// Set up a collection to contain project information. On the server,
-// it is backed by a MongoDB collection named "projects."
+// A very simple meteor app built out from the leaderboard example
 
 Projects = new Meteor.Collection("projects");
 
 if (Meteor.is_client) {
+	// link each template value to a db query - meteor propagates any changes to the underlying data in real time, automatically
+	// (note. this could perhaps be improved by reducing the number of queries and not having so many separate statements?)
 	Template.statusboard.projects = function () {
 		return Projects.find({}, {sort: {score: -1, name: 1}});
 	};
@@ -39,16 +40,11 @@ if (Meteor.is_client) {
 	};
 	
 	Template.project.selected = function () {
-		//console.log(this)
-		//if (this.status == "GOOD") {
-		//	console.log ('GOOD');
-		//}
-		
 		return Session.equals("selected_project", this._id) ? "selected" : '';
 	};
 	
-
 	Template.statusboard.events = {
+		// update project
 		'click input.update': function () {
 			Projects.update(Session.get("selected_project"), {
 				name: $('#project_name_edit').val(),
@@ -61,10 +57,12 @@ if (Meteor.is_client) {
 
 			Session.set("selected_project", null);
 		},
+		// remove project
 		'click input.remove': function() {
 			var project = Projects.findOne(Session.get("selected_project"));
 			Projects.remove({_id: project._id})
 		},
+		// insert a new project
 		'click input.add': function () {
 			var newName = $('#project_name').val();
 			if (Validation.valid_name(newName)) {
@@ -73,26 +71,29 @@ if (Meteor.is_client) {
 				})
 				
 				var project = Projects.findOne({name: newName});
-				
 				Session.set("selected_project", project._id);
 			}
 		},
+		// nothing is selected
 		'click input.cancel': function () {
 			Session.set("selected_project", null);
 		}
 	};
-
+	
+	// on clicking a project, update the var which stores this
 	Template.project.events = {
 		'click': function () {
 			Session.set("selected_project", this._id);
 		}
 	};
 	
+	// set the selected option for the status drop down
 	var selectedStatus = Template.statusboard.selected_status;
 	Handlebars.registerHelper('isStatusSelected', function(selectedStatus, optionValue) {
 	  return selectedStatus == optionValue ? ' selected' : '';
 	});
 	
+	// choose a colour for the status text
 	Handlebars.registerHelper('getStatusColor', function(selectedStatus) {
 		switch (selectedStatus) {
 			case "GOOD" : {
@@ -114,6 +115,7 @@ if (Meteor.is_client) {
 		}
 	});
 	
+	// set the selected option for the target drop down
 	var selectedTarget = Template.statusboard.selected_target;
 	Handlebars.registerHelper('isTargetSelected', function(selectedTarget, optionValue) {
 	  return selectedTarget == optionValue ? ' selected' : '';
@@ -144,7 +146,7 @@ if (Meteor.is_client) {
 	};
 };
 
-// On server startup, create some projects if the database is empty.
+// On server startup, create some projects if the database is empty. Left over from the example to show where server code would go if there were any!
 if (Meteor.is_server) {
 	Meteor.startup(function () {
 		if (Projects.find().count() === 0) {
