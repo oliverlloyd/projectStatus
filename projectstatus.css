@@ -23,7 +23,7 @@ body {
 }
 
 .titleContainer {
-	border-style: none none dashed none;
+	border-style: none none dotted none;
 	border-color: #ccc;
 	border-width: 4px;
 	margin: 10px 50px;
@@ -31,11 +31,15 @@ body {
 }
 
 .header {
-	padding: 5px;
-	border-style: dashed none none none;
+	padding: 10px 0px 0px 5px;
+	margin: 5px 0px 10px 0px;
+}
+
+.statusboard {
+	border-style: dotted none dotted none;
 	border-color: #ccc;
 	border-width: 4px;
-	margin: 30px 0px 10px 0px;
+	padding-bottom: 10px;
 }
 
 .header .name {
@@ -104,10 +108,10 @@ body {
 .details, .none {
 	font-weight: bold;
 	font-size: 1.5em;
-	border-style: dashed none none none;
+	border-style: none none none none;
 	border-color: #ccc;
 	border-width: 4px;
-	margin: 20px 10px;
+	margin: 15px 10px;
 	padding: 10px 0px;
 }
 
