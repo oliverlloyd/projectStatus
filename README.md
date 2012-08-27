@@ -7,3 +7,9 @@ The meteor framework means that CRUD actions are automatically propagated to all
 
 Demo: http://projectstatus.meteor.com
 Meteor: http://www.meteor.com/main
+
+
+## License
+projectStatus is released under the MIT license:
+
+www.opensource.org/licenses/MIT
