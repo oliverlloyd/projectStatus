@@ -93,7 +93,6 @@ if (Meteor.is_client) {
 	  return selectedStatus == optionValue ? ' selected' : '';
 	});
 	
-	// not currently used
 	Handlebars.registerHelper('getStatusColor', function(selectedStatus) {
 		switch (selectedStatus) {
 			case "GOOD" : {
