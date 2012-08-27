@@ -119,7 +119,7 @@ body {
 	cursor: pointer;
 }
 
-/* Button style */
+/* Button styles */
 .button {
 	display: inline-block;
 	cursor: pointer;
@@ -166,6 +166,7 @@ body {
 	background: #dfd52e;
 }
 
+/* Footer */
 #footer {
 	position:fixed;
 	right:1%;
