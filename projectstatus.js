@@ -60,7 +60,9 @@ if (Meteor.is_client) {
 		// remove project
 		'click a.remove': function() {
 			var project = Projects.findOne(Session.get("selected_project"));
-			Projects.remove({_id: project._id})
+			if (confirm("Delete "+project.name+"?")) {
+				Projects.remove({_id: project._id})
+			}
 		},
 		// insert a new project
 		'click a.add': function () {
