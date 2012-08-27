@@ -49,7 +49,7 @@ if (Meteor.is_client) {
 			Projects.update(Session.get("selected_project"), {
 				name: $('#project_name_edit').val(),
 				release: $('#project_release_edit').val(),
-				target: $('#project_target_edit').val(),
+				target: parseInt($('#project_target_edit').val(), 10),
 				comment: $('#project_comment_edit').val(),
 				risk: $('#project_risk_edit').val(),
 				status: $('#project_status_edit').val()
