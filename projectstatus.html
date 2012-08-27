@@ -12,7 +12,7 @@
 				Built using <a href="http://meteor.com/main" class="">Meteor</a>
 			</div>
 			<div class="span6" align="right">
-				<a href="https://github.com/olloyd/projectStatus" class="download button-primary button">View on Github</a>
+				<a href="https://github.com/oliverlloyd/projectStatus" class="download button-primary button">View on Github</a>
 			</div>
 		</div>
 	</div>
@@ -31,7 +31,7 @@
 		</div>
 	</div>
 
-	<div class="statusboard">
+	<div id="divStatusBoard" class="statusboard">
 		<div class="header">
 			<span class="name">Project</span>
 			<span class="target">Target Reached</span>
@@ -50,6 +50,7 @@
 			</div>
 			<div class="span6" align="right">
 				<a class="button cancel">Cancel</a>
+				<a class="button update button-primary">Save Changes</a>
 				<a class="button remove button-danger">Remove Project</a>
 			</div>
 		</div>
@@ -132,7 +133,7 @@
 <template name="project">
 	<div class="project {{selected}}">
 		<span class="name">{{name}}</span>
-		<span class="target">{{target}}</span>
+		<span class="target">{{target}}%</span>
 		<span class="status"style="color:{{getStatusColor status}}">{{status}}</span>
 	</div>
 </template>
