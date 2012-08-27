@@ -48,25 +48,17 @@ body {
 
 .header .target {
     display: inline-block;
-    width: 235px;
-    text-align: right;
+    width: 355px;
+    text-align: center;
     font-size: 1.7em;
     color: #777;
 	font-weight: bold;
 }
 
-.header .release {
-    display: inline-block;
-    width: 235px;
-    text-align: right;
-    font-size: 1.7em;
-    color: #777;
-	font-weight: bold;
-}
 
 .header .status {
     display: inline-block;
-    width: 235px;
+    width: 355px;
     text-align: right;
     font-size: 1.7em;
     color: #777;
@@ -87,23 +79,15 @@ body {
 
 .project .target {
     display: inline-block;
-    width: 235px;
-    text-align: right;
-    font-size: 1.5em;
-    color: #777;
-}
-
-.project .release {
-    display: inline-block;
-    width: 235px;
-    text-align: right;
+    width: 355px;
+    text-align: center;
     font-size: 1.5em;
     color: #777;
 }
 
 .project .status {
     display: inline-block;
-    width: 235px;
+    width: 355px;
     text-align: right;
     font-size: 1.5em;
 	font-weight: bold;
@@ -123,7 +107,7 @@ body {
     border-style: dashed none none none;
     border-color: #ccc;
     border-width: 4px;
-    margin: 50px 10px;
+    margin: 20px 10px;
     padding: 10px 0px;
 }
 
