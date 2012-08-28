@@ -44,7 +44,7 @@ body {
 
 .header .name {
 	display: inline-block;
-	width: 270px;
+	width: 360px;
 	font-size: 1.75em;
 	color: #777;
 	font-weight: bold;
@@ -52,7 +52,16 @@ body {
 
 .header .target {
 	display: inline-block;
-	width: 355px;
+	width: 135;
+	text-align: center;
+	font-size: 1.7em;
+	color: #777;
+	font-weight: bold;
+}
+
+.header .risk {
+	display: inline-block;
+	width: 285px;
 	text-align: center;
 	font-size: 1.7em;
 	color: #777;
@@ -62,7 +71,7 @@ body {
 
 .header .status {
 	display: inline-block;
-	width: 355px;
+	width: 160px;
 	text-align: right;
 	font-size: 1.7em;
 	color: #777;
@@ -83,15 +92,23 @@ body {
 
 .project .target {
 	display: inline-block;
-	width: 355px;
+	width: 345px;
 	text-align: center;
 	font-size: 1.5em;
 	color: #777;
 }
 
+.project .risk {
+	display: inline-block;
+	width: 105px;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
 .project .status {
 	display: inline-block;
-	width: 355px;
+	width: 255px;
 	text-align: right;
 	font-size: 1.5em;
 	font-weight: bold;

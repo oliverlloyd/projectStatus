@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'child_process' ]
+2 info using npm@1.1.33
+3 info using node@v0.8.1
+4 verbose config file /Users/oliverlloyd/.npmrc
+5 verbose config file /usr/local/etc/npmrc
+6 verbose config file /usr/local/lib/node_modules/npm/npmrc
+7 verbose read json /Users/oliverlloyd/Sites/projectStatus/package.json
+8 verbose read json /Users/oliverlloyd/Sites/projectStatus/package.json
+9 verbose cache add [ 'child_process', null ]
+10 silly cache add name=undefined spec="child_process" args=["child_process",null]
+11 verbose parsed url { pathname: 'child_process',
+11 verbose parsed url   path: 'child_process',
+11 verbose parsed url   href: 'child_process' }
+12 verbose lock child_process /Users/oliverlloyd/.npm/4845fa97410ff33f0112adeae3dd54c7b063c002-child-process.lock
+13 verbose addNamed [ 'child_process', '' ]
+14 verbose addNamed [ null, '' ]
+15 verbose lock child_process@ /Users/oliverlloyd/.npm/512a7ef6a11e6b2c242232013887b247ec57286d-child-process-.lock
+16 silly addNameRange { name: 'child_process', range: '', hasData: false }
+17 verbose url raw child_process
+18 verbose url resolving [ 'https://registry.npmjs.org/', './child_process' ]
+19 verbose url resolved https://registry.npmjs.org/child_process
+20 info retry registry request attempt 1 at 10:20:02
+21 http GET https://registry.npmjs.org/child_process
+22 http 404 https://registry.npmjs.org/child_process
+23 silly registry.get cb [ 404,
+23 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+23 silly registry.get     date: 'Tue, 28 Aug 2012 09:20:01 GMT',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'content-length': '52',
+23 silly registry.get     'cache-control': 'must-revalidate' } ]
+24 error 404 'child_process' is not in the npm registry.
+24 error 404 You should bug the author to publish it
+24 error 404
+24 error 404 Note that you can also install from a
+24 error 404 tarball, folder, or http url, or git url.
+25 error System Darwin 11.4.2
+26 error command "node" "/usr/local/bin/npm" "install" "child_process"
+27 error cwd /Users/oliverlloyd/Sites/projectStatus
+28 error node -v v0.8.1
+29 error npm -v 1.1.33
+30 error code E404
+31 error message 404 Not Found: child_process
+32 verbose exit [ 1, true ]
