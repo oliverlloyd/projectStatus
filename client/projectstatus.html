@@ -60,7 +60,7 @@
 				<a class="button remove button-danger">Remove Project</a>
 			</div>
 		</div>
-	</br>
+		
 	<div class="row-fluid">
 		<div class="span4">
 			<div class="control-group">
@@ -118,27 +118,28 @@
 					<input type="text" id="project_release_edit" value="{{selected_release}}">
 				</div>
 			</div>
+			</br>
+			<a class="button update button-primary">Save Changes</a>
+			<a class="button cancel">Cancel</a>
 		</div>
 		<div class="span8">
 			<div class="control-group">
 				<label class="control-label" for="project_comment_edit">Comments</label>
 				<div class="controls">
-					<textarea style="width:635px" rows="5" id="project_comment_edit">{{selected_comment}}</textarea>
+					<textarea style="width:635px" rows="9" id="project_comment_edit">{{selected_comment}}</textarea>
 				</div>
 			</div>
 
 			<div class="control-group">
 				<label class="control-label" for="project_risk_edit">Risks</label>
 				<div class="controls">
-					<textarea style="width:635px" rows="5" id="project_risk_edit">{{selected_risk}}</textarea>
+					<textarea style="width:635px" rows="8" id="project_risk_edit">{{selected_risk}}</textarea>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="row-fluid">
-		<a class="button update button-primary">Save Changes</a>
-		<a class="button cancel">Cancel</a>
 	</div>
 	{{/if}}
 
