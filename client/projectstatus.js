@@ -85,8 +85,6 @@ Template.statusboard.events = {
 	// nothing is selected
 	'click a.cancel': function () {
 		Session.set("selected_project", null);
-		
-		Meteor.call('fork');
 	}
 };
 
