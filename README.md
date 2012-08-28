@@ -11,14 +11,14 @@ Learn: [Meteor](http://www.meteor.com/main)
 
 ## Use it
 
-Install Meteor:
+Install Meteor:  
 `curl https://install.meteor.com | /bin/sh`
 
-Clone repo:
-`git clone git://github.com/oliverlloyd/projectStatus.git`
+Clone repo:  
+`git clone git://github.com/oliverlloyd/projectStatus.git`  
 `cd projectStatus`
 
-Deploy:
+Deploy:  
 `meteor deploy [YOURPROJECTNAME].meteor.com`
 
 
