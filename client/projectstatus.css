@@ -115,7 +115,7 @@ body {
 }
 
 .project.selected {
-	background-color: #FAFAD2;
+	background-color: #DCDCDC;
 }
 
 .project.selected .score {
