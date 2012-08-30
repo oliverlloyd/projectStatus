@@ -115,7 +115,7 @@ body {
 }
 
 .project.selected {
-	background-color: yellow;
+	background-color: #FAFAD2;
 }
 
 .project.selected .score {
@@ -166,10 +166,9 @@ body {
 	background-color: #DCDCDC;
 }
 
-.button-primary:hover {
-	text-decoration: inherit;
-	color: inherit;
-	background-color: #f5e810;
+.button-danger {
+	background: #EE6363;
+	color: white;
 }
 
 .button-danger:hover {
@@ -178,13 +177,24 @@ body {
 	background-color: #FF6A6A;
 }
 
-.button-danger {
-	background: #EE6363;
-	color: white;
+.button-primary {
+	background: #E3E3E3;
 }
 
-.button-primary {
-	background: #dfd52e;
+.button-primary:hover {
+	text-decoration: inherit;
+	color: inherit;
+	background-color: #C4C4C4;
+}
+
+.button-save {
+	background: #AED9A5;
+}
+
+.button-save:hover {
+	text-decoration: inherit;
+	color: inherit;
+	background-color: #B4EEB4;
 }
 
 /* Footer */
