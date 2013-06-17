@@ -17,9 +17,10 @@ body {
 
 .title {
 	font: Helvetica;
-	font-size: 2.95em;
+	font-size: 2.0em;
 	font-weight: bold;
-	white-space:pre-line ;
+	white-space:pre-line;
+	padding-top: 5px;
 }
 
 .titleContainer {
@@ -44,7 +45,7 @@ body {
 
 .header .name {
 	display: inline-block;
-	width: 360px;
+	width: 270px;
 	font-size: 1.75em;
 	color: #777;
 	font-weight: bold;
@@ -52,7 +53,7 @@ body {
 
 .header .target {
 	display: inline-block;
-	width: 135;
+	width: 345px;
 	text-align: center;
 	font-size: 1.7em;
 	color: #777;
@@ -61,8 +62,8 @@ body {
 
 .header .risk {
 	display: inline-block;
-	width: 285px;
-	text-align: center;
+	width: 105px;
+	text-align: right;
 	font-size: 1.7em;
 	color: #777;
 	font-weight: bold;
@@ -71,7 +72,7 @@ body {
 
 .header .status {
 	display: inline-block;
-	width: 160px;
+	width: 255px;
 	text-align: right;
 	font-size: 1.7em;
 	color: #777;

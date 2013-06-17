@@ -3,7 +3,7 @@
 // link each template value to a db query - meteor propagates any changes to the underlying data in real time, automatically
 // (note. this could perhaps be improved by reducing the number of queries and not having so many separate statements?)
 Template.statusboard.projects = function () {
-	return Projects.find({}, {sort: {target: -1, status: 1, name: 1}});
+	return Projects.find({}, {sort: {status: 1, name: 1}});
 };
 
 Template.statusboard.selected_name = function () {
@@ -96,8 +96,8 @@ Template.project.events = {
 };
 
 // set the selected option for the status drop down
-var selectedStatus = Template.statusboard.selected_status;
-Handlebars.registerHelper('isStatusSelected', function(selectedStatus, optionValue) {
+Handlebars.registerHelper('isStatusSelected', function(undef, optionValue) {
+	var selectedStatus = Template.statusboard.selected_status();
   return selectedStatus == optionValue ? ' selected' : '';
 });
 
@@ -108,11 +108,7 @@ Handlebars.registerHelper('getStatusColor', function(selectedStatus) {
 			return '#9ACD32';
 		}
 		break;
-		case "BAD" : {
-			return 'orange';
-		}
-		break;
-		case "UGLY" : {
+		case "BLOCKED" : {
 			return '#EE6363';
 		}
 		break;
@@ -130,7 +126,8 @@ Handlebars.registerHelper('getRiskColor', function(selectedRisk) {
 			return '#9ACD32';
 		}
 		break;
-		case "DODGY" : {
+		case "CONCERN" : {
+		case "CONCERN" : {
 			return 'orange';
 		}
 		break;
@@ -142,14 +139,14 @@ Handlebars.registerHelper('getRiskColor', function(selectedRisk) {
 });
 
 // set the selected option for the target drop down
-var selectedTarget = Template.statusboard.selected_target;
-Handlebars.registerHelper('isTargetSelected', function(selectedTarget, optionValue) {
+Handlebars.registerHelper('isTargetSelected', function(undef, optionValue) {
+	var selectedTarget = Template.statusboard.selected_target();
   return selectedTarget == optionValue ? ' selected' : '';
 });
 
 // set the selected option for the risk drop down
-var selectedRisk = Template.statusboard.selected_risk_level;
-Handlebars.registerHelper('isRiskSelected', function(selectedRisk, optionValue) {
+Handlebars.registerHelper('isRiskSelected', function(undef, optionValue) {
+	var selectedRisk = Template.statusboard.selected_risk_level();
   return selectedRisk == optionValue ? ' selected' : '';
 });
 

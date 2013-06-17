@@ -20,8 +20,8 @@
 
 <template name="statusboard">
 	<div class="row-fluid">
-		<div class="span7">
-			<span class="title">What's my Project's Status?</span>
+		<div class="span7 title">
+			<span>What's My Project's Status?</span>
 		</div>
 		<div class="span5">
 			<form class="form-inline" align="right">
@@ -76,8 +76,7 @@
 					<select id="project_status_edit">
 						<option {{isStatusSelected selectedStatus "GOOD"}}>GOOD</option>
 						<option {{isStatusSelected selectedStatus "IN PROGRESS"}}>IN PROGRESS</option>
-						<option {{isStatusSelected selectedStatus "BAD"}}>BAD</option>
-						<option {{isStatusSelected selectedStatus "UGLY"}}>UGLY</option>
+						<option {{isStatusSelected selectedStatus "BLOCKED"}}>BLOCKED</option>
 					</select>
 				</div>
 			</div>
@@ -87,7 +86,7 @@
 				<div class="controls">
 					<select id="project_risk_level_edit">
 						<option {{isRiskSelected selectedRisk "SAFE"}}>SAFE</option>
-						<option {{isRiskSelected selectedRisk "DODGY"}}>DODGY</option>
+						<option {{isRiskSelected selectedRisk "CONCERN"}}>CONCERN</option>
 						<option {{isRiskSelected selectedRisk "DANGEROUS"}}>DANGEROUS</option>
 					</select>
 				</div>
